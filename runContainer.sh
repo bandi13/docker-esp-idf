@@ -3,7 +3,7 @@
 # Set this to your ESP project directory
 export ESP_PROJECT=~/githubs/esp32-80211-tx
 
-#docker pull bandi13/esp-idf
+docker pull bandi13/esp-idf
 
 # Create cache for built objects
 docker volume create ccache

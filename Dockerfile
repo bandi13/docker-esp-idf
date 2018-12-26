@@ -20,11 +20,11 @@ ENV IDF_PATH /esp/esp-idf
 # Install python dependencies
 RUN /usr/bin/python -m pip install --user -r /esp/esp-idf/requirements.txt
 
-# Add the toolchain binaries to PATH
-ENV PATH $PATH:$ESP_TCHAIN_BASEDIR/xtensa-esp32-elf/bin:$ESP_TCHAIN_BASEDIR/esp32ulp-elf-binutils/bin:$IDF_PATH/tools
-
 # Force the use of ccache
-RUN for prog in /opt/local/espressif/*/bin/*; do ln -s /usr/bin/ccache /usr/local/bin/$(basename $prog); done
+RUN mkdir -p /opt/ccache/bin && for prog in /opt/local/espressif/*/bin/*; do ln -s /usr/bin/ccache /opt/ccache/bin/$(basename $prog); done
+
+# Add the toolchain binaries to PATH
+ENV PATH /opt/ccache/bin:$ESP_TCHAIN_BASEDIR/xtensa-esp32-elf/bin:$ESP_TCHAIN_BASEDIR/esp32ulp-elf-binutils/bin:$IDF_PATH/tools:$PATH
 
 # This is the directory where our project will show up
 RUN mkdir -p /esp/project
