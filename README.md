@@ -1,3 +1,7 @@
+[![Docker Stars](https://img.shields.io/docker/stars/bandi13/esp-idf.svg?style=flat-square)](https://hub.docker.com/r/bandi13/esp-idf/)
+[![Docker Pulls](https://img.shields.io/docker/pulls/bandi13/esp-idf.svg?style=flat-square)](https://hub.docker.com/r/bandi13/esp-idf/)
+[![](https://images.microbadger.com/badges/image/bandi13/esp-idf.svg)](https://microbadger.com/images/bandi13/esp-idf "Get your own image badge on microbadger.com")
+
 # esp-idf
 A container for Espressif's IDE that is self contained all you need is your project.
 
