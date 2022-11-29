@@ -20,7 +20,7 @@ if [ ! -e "/dev/ttyUSB0" ]; then
   echo "No USB device for ESP32 found. You won't be able to flash the part."
   sleep 1
 else
-  RUN_ARGS+="--device /dev/ttyUSB0"
+  RUN_ARGS+=" --device /dev/ttyUSB0"
 fi
 
 # Run the container
