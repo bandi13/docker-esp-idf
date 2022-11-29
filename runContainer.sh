@@ -6,7 +6,7 @@ if [ -z $1 ]; then
 fi
 
 # Set this to your ESP project directory
-ESP_PROJECT="$(cd $(dirname \"$1\"); pwd)/$(basename $1)"
+ESP_PROJECT="$(cd $(dirname $1); pwd)/$(basename $1)"
 
 CONTAINER_NAME=bandi13/esp-idf
 docker pull ${CONTAINER_NAME}
